@@ -9,67 +9,140 @@
       --bg: #0f2f24;
       --card: #fffaf0;
       --text: #1f2937;
-      --muted: #667085;
       --accent: #b3261e;
-      --accent2: #1f6f50;
-      --gold: #d6a84b;
+      --green: #1f6f50;
       --line: #eadfcb;
     }
+
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(255,255,255,.08), transparent 30%),
-        radial-gradient(circle at bottom right, rgba(214,168,75,.12), transparent 30%),
-        var(--bg);
+      background: var(--bg);
       color: var(--text);
       min-height: 100vh;
-      padding: 22px;
+      padding: 18px;
     }
-    .wrap { max-width: 760px; margin: 0 auto; }
-    .hero { text-align: center; color: white; margin: 12px 0 24px; }
-    .hero .icon { font-size: 54px; margin-bottom: 8px; }
-    h1 { margin: 0; font-size: clamp(30px, 7vw, 48px); letter-spacing: .2px; }
-    .hero p { margin: 10px auto 0; max-width: 620px; line-height: 1.5; opacity: .92; font-size: 16px; }
+
+    .wrap {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      text-align: center;
+      color: white;
+      margin: 18px 0 22px;
+    }
+
+    .hero .icon {
+      font-size: 52px;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 7vw, 46px);
+    }
+
+    .hero p {
+      margin: 10px auto 0;
+      max-width: 560px;
+      line-height: 1.5;
+      font-size: 16px;
+      opacity: .95;
+    }
+
     .card {
       background: var(--card);
-      border-radius: 24px;
-      padding: 24px;
-      box-shadow: 0 18px 45px rgba(0,0,0,.22);
-      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: 0 16px 40px rgba(0,0,0,.22);
     }
-    .intro { text-align: center; margin-bottom: 20px; }
-    .intro strong { color: var(--accent); }
-    .gift { border: 1px solid var(--line); background: white; border-radius: 18px; padding: 16px; margin: 14px 0; }
-    .gift-title { display: flex; align-items: center; gap: 10px; font-weight: 800; color: var(--accent2); margin-bottom: 10px; font-size: 18px; }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 18px;
+      line-height: 1.5;
+    }
+
+    .intro strong {
+      color: var(--accent);
+    }
+
+    .gift {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 15px;
+      margin: 12px 0;
+    }
+
+    .gift-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      color: var(--green);
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
     .num {
-      width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center;
-      background: var(--accent2); color: white; font-weight: 800; flex: 0 0 34px;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--green);
+      color: white;
+      font-weight: 800;
     }
-    label { display: block; font-weight: 700; font-size: 14px; margin: 14px 0 6px; }
-    input, textarea {
-      width: 100%; border: 1px solid #cfc5b5; border-radius: 12px; padding: 13px 14px;
-      font-size: 16px; background: #fffdf8; color: #222; outline: none;
+
+    input {
+      width: 100%;
+      border: 1px solid #cfc5b5;
+      border-radius: 12px;
+      padding: 13px 14px;
+      font-size: 16px;
+      background: #fffdf8;
+      outline: none;
     }
-    textarea { min-height: 88px; resize: vertical; }
-    input:focus, textarea:focus { border-color: var(--accent2); box-shadow: 0 0 0 3px rgba(31,111,80,.12); }
-    .extra { margin-top: 22px; border-top: 2px dashed var(--line); padding-top: 20px; }
-    .extra h2 { margin: 0 0 6px; color: var(--accent); font-size: 22px; }
-    .hint { color: var(--muted); font-size: 14px; margin: 0 0 10px; line-height: 1.45; }
+
+    input:focus {
+      border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(31,111,80,.12);
+    }
+
     button {
-      width: 100%; margin-top: 24px; border: 0; border-radius: 16px; padding: 16px 18px;
-      font-size: 18px; font-weight: 800; color: white;
-      background: linear-gradient(135deg, var(--accent), #8f1813);
-      cursor: pointer; box-shadow: 0 10px 20px rgba(179,38,30,.22);
+      width: 100%;
+      margin-top: 20px;
+      border: 0;
+      border-radius: 15px;
+      padding: 16px;
+      font-size: 18px;
+      font-weight: 800;
+      color: white;
+      background: var(--accent);
+      cursor: pointer;
     }
-    button:active { transform: translateY(1px); }
-    .privacy { margin: 14px 4px 0; text-align: center; font-size: 12px; color: var(--muted); line-height: 1.45; }
-    .footer { text-align: center; color: white; opacity: .8; margin: 18px 0 4px; font-size: 13px; }
+
+    button:active {
+      transform: translateY(1px);
+    }
+
+    .footer {
+      text-align: center;
+      color: white;
+      margin: 16px 0 4px;
+      font-size: 13px;
+      opacity: .85;
+    }
+
     @media (max-width: 560px) {
-      body { padding: 14px; }
-      .card { padding: 17px; border-radius: 20px; }
-      .gift { padding: 14px; }
+      body { padding: 12px; }
+      .card { padding: 16px; }
     }
   </style>
 </head>
@@ -78,87 +151,46 @@
     <section class="hero">
       <div class="icon">🎄🎁</div>
       <h1>Mr. Shazam's Christmas List</h1>
-      <p>
-        Chelsea asked for a list, so here it is. Pick five things you would genuinely be excited to open on Christmas morning.
-        Big, small, useful, fun, ridiculous, sentimental, or something you would never buy for yourself.
-      </p>
+      <p>Pick five things you would really love for Christmas.</p>
     </section>
 
     <main class="card">
       <div class="intro">
-        <strong>Dear Mr. Shazam,</strong><br />
-        Give Mrs. Shazam a little help this year. Fill out your five favorites below and send them straight to her.
+        <strong>Dear Mr. Shazam,</strong><br>
+        Give Mrs. Shazam five ideas to work with this Christmas.
       </div>
 
       <form action="https://formsubmit.co/Chelseaemma2014@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="🎄 Mr. Shazam's Christmas List 🎁" />
+        <input type="hidden" name="_subject" value="Mr. Shazam's Christmas List" />
         <input type="hidden" name="_template" value="table" />
         <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_next" value="https://formsubmit.co/thanks" />
 
         <div class="gift">
           <div class="gift-title"><span class="num">1</span>Gift Idea One</div>
-          <label for="gift1">What would you love?</label>
-          <input id="gift1" name="Gift Idea 1" type="text" required placeholder="Example: New tool, game, watch, trip, car part..." />
-          <label for="gift1note">Details, size, color, link, or why you want it</label>
-          <textarea id="gift1note" name="Gift Idea 1 Details" placeholder="Add anything that would help Chelsea pick the right one"></textarea>
+          <input name="Gift Idea 1" type="text" required placeholder="What would you love?" />
         </div>
 
         <div class="gift">
           <div class="gift-title"><span class="num">2</span>Gift Idea Two</div>
-          <label for="gift2">What would you love?</label>
-          <input id="gift2" name="Gift Idea 2" type="text" required />
-          <label for="gift2note">Details, size, color, link, or why you want it</label>
-          <textarea id="gift2note" name="Gift Idea 2 Details"></textarea>
+          <input name="Gift Idea 2" type="text" required placeholder="What would you love?" />
         </div>
 
         <div class="gift">
           <div class="gift-title"><span class="num">3</span>Gift Idea Three</div>
-          <label for="gift3">What would you love?</label>
-          <input id="gift3" name="Gift Idea 3" type="text" required />
-          <label for="gift3note">Details, size, color, link, or why you want it</label>
-          <textarea id="gift3note" name="Gift Idea 3 Details"></textarea>
+          <input name="Gift Idea 3" type="text" required placeholder="What would you love?" />
         </div>
 
         <div class="gift">
           <div class="gift-title"><span class="num">4</span>Gift Idea Four</div>
-          <label for="gift4">What would you love?</label>
-          <input id="gift4" name="Gift Idea 4" type="text" required />
-          <label for="gift4note">Details, size, color, link, or why you want it</label>
-          <textarea id="gift4note" name="Gift Idea 4 Details"></textarea>
+          <input name="Gift Idea 4" type="text" required placeholder="What would you love?" />
         </div>
 
         <div class="gift">
           <div class="gift-title"><span class="num">5</span>Gift Idea Five</div>
-          <label for="gift5">What would you love?</label>
-          <input id="gift5" name="Gift Idea 5" type="text" required />
-          <label for="gift5note">Details, size, color, link, or why you want it</label>
-          <textarea id="gift5note" name="Gift Idea 5 Details"></textarea>
+          <input name="Gift Idea 5" type="text" required placeholder="What would you love?" />
         </div>
 
-        <section class="extra">
-          <h2>Helpful Extras</h2>
-          <p class="hint">These are optional, but they can make surprise shopping a lot easier.</p>
-
-          <label for="sizes">Sizes</label>
-          <input id="sizes" name="Sizes" type="text" placeholder="Shirt, pants, shoes, hat, ring, etc." />
-
-          <label for="favorites">Favorite things right now</label>
-          <textarea id="favorites" name="Favorite Things" placeholder="Brands, snacks, hobbies, games, shows, tools, colors, anything"></textarea>
-
-          <label for="experience">Something we could do together</label>
-          <textarea id="experience" name="Experience Idea" placeholder="Weekend away, dinner, concert, activity, trip, date night..."></textarea>
-
-          <label for="surprise">One thing Chelsea can completely surprise you with</label>
-          <textarea id="surprise" name="Surprise Me With" placeholder="Give her a little freedom here"></textarea>
-        </section>
-
         <button type="submit">🎁 Send My Christmas List to Chelsea</button>
-
-        <p class="privacy">
-          Your answers are submitted to Chelseaemma2014@gmail.com through FormSubmit.
-          The first time this form is used, FormSubmit may send Chelsea a verification email before it begins forwarding submissions.
-        </p>
       </form>
     </main>
 
